@@ -1,0 +1,13 @@
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\bin\Debug\PANes.exe
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\bin\Debug\PANes.pdb
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\bin\Debug\PANes.xml
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\PANes.Form1.resources
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\PANes.Resources.resources
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\PANes.vbproj.GenerateResource.Cache
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\PANes.exe
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\PANes.xml
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\PANes.pdb
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\bin\Debug\Interop.VBScript_RegExp_55.dll
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\Interop.VBScript_RegExp_55.dll
+C:\Users\Martin\Documents\Visual Studio 2008\Projects\PANes\PANes\obj\Debug\PANes.vbproj.ResolveComReference.cache
