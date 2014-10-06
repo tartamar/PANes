@@ -50,6 +50,8 @@ Partial Class Form1
         '
         'Button_Search
         '
+        Me.Button_Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Search.Image = CType(resources.GetObject("Button_Search.Image"), System.Drawing.Image)
         Me.Button_Search.Location = New System.Drawing.Point(435, 19)
         Me.Button_Search.Name = "Button_Search"
         Me.Button_Search.Size = New System.Drawing.Size(125, 75)
@@ -66,6 +68,7 @@ Partial Class Form1
         '
         'GroupBox1
         '
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(6, 109)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(560, 329)

@@ -2,69 +2,70 @@
 
 Public Class Form1
 
-    'función para ejecutar la expesión regular
-    Function Extraer_direccion_Email(ByVal PathOrigen As String, _
-                                ByVal pathDestino As String, _
-                                ByVal Cadena_Expresion As String) As Boolean
+    'RE Function
+    Function Extraer_Tarjeta(ByVal PathOrigen As String, ByVal pathDestino As String, ByVal Cadena_Expresion As String) As Boolean
 
         Dim obj_Expresion As RegExp, Match, Matches
-
-
         Dim fso As Object, fil As Object, contenido As String, sal As Object
 
-        'Nuevo objeto para crear leer y los archivos con Fso
+        'Create and Read Files
         fso = CreateObject("Scripting.FileSystemObject")
 
-        'Lee el archivo de origen y lo almacena en contenido
+        'Read source file
         fil = fso.OpenTextFile(PathOrigen, 1)
 
         contenido = fil.ReadAll
 
-        'Crea un archivo para guardar las direcciones de email
+        'Create file destination
         sal = fso.CreateTextFile(pathDestino, True)
 
-        'Nuevo objeto de tipo RegExp para poder utilizar las expresiones regulares
+        'RegExp
         obj_Expresion = New RegExp
 
-        'Se le pasa la expresion regular a la propiedad Pattern
+        'RE to Pattern
         obj_Expresion.Pattern = Cadena_Expresion
-
         obj_Expresion.IgnoreCase = True
-
         obj_Expresion.Global = True
 
-        ' Método Execute para pasarle el contenido del archivo a Evaluar
+        'Execute - Content
         Matches = obj_Expresion.Execute(contenido)
 
-        ' recorre en la colección las direcciones y las escribe en el archivo txt de salida y las agrega al control List
-
+        'Read a colection and write txt file
         For Each Match In Matches
             sal.WriteLine(Match.Value)
             ListBox1.Items.Add(Match.Value)
         Next
 
-        'Cierra los archivos
+        'Close files
         sal.Close()
         fil.Close()
 
-        'Fin
-        MsgBox(" Finalizado ", vbInformation)
-        Extraer_direccion_Email = True
+        'End
+        MsgBox(" File Complete ", vbInformation)
+        Extraer_Tarjeta = True
 
         Exit Function
 
         'Error
 errSub:
         MsgBox(Err.Description, vbCritical)
-        Extraer_direccion_Email = False
+        Extraer_Tarjeta = False
 
     End Function
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button_Search.Click
-
-        'Basic credit card
-        'Call Extraer_direccion_Email(TextBox1.Text, TextBox2.Text, "^(\d{4}[- ]){3}\d{4}|\d{16}$")
-        Call Extraer_direccion_Email(TextBox1.Text, TextBox2.Text, "(\d[\s|-]?){12,15}\d")
+        'Check text
+        If TextBox1.Text = "" Then
+            MsgBox("Source File is empy")
+        Else
+            If TextBox2.Text = "" Then
+                MsgBox("Destination File is empy")
+            Else
+                'Basic credit card
+                'Call Extraer_direccion_Email(TextBox1.Text, TextBox2.Text, "^(\d{4}[- ]){3}\d{4}|\d{16}$")
+                Call Extraer_Tarjeta(TextBox1.Text, TextBox2.Text, "(\d[\s|-]?){12,15}\d")
+            End If
+        End If
 
     End Sub
 End Class
